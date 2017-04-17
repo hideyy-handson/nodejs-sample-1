@@ -1,5 +1,3 @@
-// Node.js Sample Web App
-
 'use strict';
 
 const express = require('express');
