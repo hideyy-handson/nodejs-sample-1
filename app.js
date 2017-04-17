@@ -1,11 +1,18 @@
 // Node.js Sample Web App
-var express = require('express')
-var app = express()
+
+'use strict';
+
+const express = require('express');
+
+const PORT = 3000;
+
+const app = express();
+
+app.set('view engine', 'jade');
 
 app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
+  res.render('index', { title: 'Hello World!'} );
+});
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
-})
+app.listen(PORT);
+console.log('Running app on http://localhost:' + PORT);
